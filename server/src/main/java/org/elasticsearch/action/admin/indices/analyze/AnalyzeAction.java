@@ -70,6 +70,7 @@ public class AnalyzeAction extends ActionType<AnalyzeAction.Response> {
         private boolean explain = false;
         private String[] attributes = Strings.EMPTY_ARRAY;
         private String normalizer;
+        private String testString;
 
         public Request() {
         }
@@ -85,6 +86,7 @@ public class AnalyzeAction extends ActionType<AnalyzeAction.Response> {
             explain = in.readBoolean();
             attributes = in.readStringArray();
             normalizer = in.readOptionalString();
+            testString = "0";
         }
 
         /**
